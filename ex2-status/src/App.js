@@ -24,7 +24,7 @@ function App2() {
                 <br />
                 La calculadora por cuestiones de tiempo solo opera entre dos
                 <br />
-                numeros enteros de un único dígito (ej: 1 + 2 ó 25 / 3).
+                numeros enteros de un único dígito (ej: 1 + 2 ó 5 / 3).
             </p>
             <Toggle2 />
             <p className="separador">
