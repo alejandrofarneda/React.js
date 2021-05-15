@@ -1,0 +1,56 @@
+.calculator .mas {
+    background-color: lightblue;
+    width: 50px;
+}
+.calculator .menos {
+    background-color: lightblue;
+    width: 50px;
+}
+.calculator .mult {
+    background-color: lightblue;
+    width: 50px;
+}
+.calculator .div {
+    background-color: lightblue;
+    width: 50px;
+}
+.calculator .numero {
+    color: rgb(0, 0, 0);
+    width: 100px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-width: 1px;
+    font-family: monospace;
+    margin: 0;
+}
+.calculator .num{
+    background-color: lightblue;
+    height: 25px;
+    color: black;
+
+}
+.calculator .igual{
+    background-color: lightblue;
+    width: 75px;
+    
+    border-bottom-left-radius: 4px;
+}
+.calculator .ce{
+    background-color: rgb(231, 80, 112);
+    width: 25px;
+    border-bottom-right-radius: 4px;
+    
+}
+.calculator {
+    border-style: outset;
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(163, 172, 163);
+    display: inline-block;
+    border-width: 1px;
+}
+.calculator .numeros{
+    display: grid;
+    grid-template-columns: 33.5px 33.5px 33.5px;
+
+}

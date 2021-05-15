@@ -1,0 +1,47 @@
+{
+  "hotels": [
+    { "id": 1, "name": "Palace", "city": "Madrid" },
+    { "id": 7, "name": "Melia", "city": "Barcelona" },
+    { "id": 12, "name": "Eurostars", "city": "Sevilla" },
+    { "id": 21, "name": "Holiday Inn", "city": "Lugo" }
+  ],
+  "chats": [
+    { "name": "Pepe", "date": "2021-05-10", "lastMessage": "Qué tal?", "unread": 3},
+    { "name": "Alicia", "date": "2021-05-09", "lastMessage": "Estás?"},
+    { "name": "Lucas", "date": "2021-05-08", "lastMessage": "Buenos días", "unread": 1}
+  ],
+  "Users": [
+        {
+            "id":1,
+            "name": "Ale",
+            "email": "alefarneda@gmail.com",
+            "reg_date": "11-05-2021",
+            "rol": "user",
+            "description": "vive en Valencia"
+        },
+        {
+            "id": 2,
+            "name": "Vasco",
+            "email": "vgama76.com",
+            "reg_date": "10-05-2021",
+            "rol": "user",
+            "description": "le gusta el vino"
+        },
+        {
+            "id": 3,
+            "name": "Lorenzo",
+            "email": "lorenzoprd@gmail.com",
+            "reg_date": "09-05-2021",
+            "rol": "user",
+            "description": "es Madrileño"
+        },
+        {            
+            
+            "name": "Ze To",
+            "email": "zeto@gmail.com",
+            "reg_date": "09-05-2021",
+            "rol": "user",
+            "description": "es Portugues"
+        }
+    ]
+}

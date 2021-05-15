@@ -1,0 +1,41 @@
+.form {
+    border-style: outset;
+    border-radius: 5px;
+    border-color: black;
+    background-color: lightblue;
+    display: inline-block;
+    border-width: 1px;
+    padding: 15px;
+    padding-top: 0;
+   
+}
+.form .email{
+    margin-left: -50px;
+}
+.usuario {
+    margin-left: -50px;
+}
+.form .emailInput{
+    margin-left: 38px;
+}
+.passInput {
+    margin-left: 9px;
+}
+.userInput {
+    margin-left: 5px;
+}
+.showPass {
+    width: 50px;
+    text-align: center;
+}
+.welcome {
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 0.5px;
+    display: inline-block;
+    padding: 25px;
+}
+.form .spinner{
+    padding-top: 18px;
+
+}

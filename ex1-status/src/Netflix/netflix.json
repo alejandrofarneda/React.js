@@ -1,0 +1,28 @@
+{
+  "user": {
+    "username": "Benito Mayo",
+    "avatar": "https://i.imgur.com/TEmUGSd.png"
+  },
+  "featured": {
+    "id": "80097499",
+    "title": "El Inocente",
+    "description": "Un hombre que mata a alguien por accidente. Una mujer que trata de dejar atrás su pasado. Su unión desencadena el caos.",
+    "cover": "https://i.imgur.com/fjMWxEZ.png"
+  },
+  "premiere": [
+    { "id": "80097499", "title": "El Inocente", "thumb": "https://i.imgur.com/xX0BFxC.png" },
+    { "id": "42973872", "title": "Los Bridgerton", "thumb": "https://i.imgur.com/FhWkifY.png" },
+    { "id": "60849513", "title": "Gambito de Dama", "thumb": "https://i.imgur.com/wOpn0nN.png" },
+    { "id": "89915915", "title": "Selena - La serie", "thumb": "https://i.imgur.com/S0mh1L6.png" },
+    { "id": "30182306", "title": "The Crown", "thumb": "https://i.imgur.com/w2N2IUG.png" },
+    { "id": "99517482", "title": "Luis Miguel - La serie", "thumb": "https://i.imgur.com/oDuxhdo.png" }
+  ],
+  "trending": [
+    { "id": "65006574", "title": "La apariencia de las cosas", "thumb": "https://i.imgur.com/qHXJGqz.png" },
+    { "id": "92821266", "title": "Sombra y Hueso", "thumb": "https://i.imgur.com/noUozgG.png" },
+    { "id": "75186345", "title": "¿Quién mató a Sara?", "thumb": "https://i.imgur.com/uWr3qdx.png" },
+    { "id": "25703652", "title": "Sexify", "thumb": "https://i.imgur.com/XxuDlcM.png" },
+    { "id": "67004218", "title": "La cocinera de Castamar", "thumb": "https://i.imgur.com/WIqTI9D.png" },
+    { "id": "82905158", "title": "New Amsterdam", "thumb": "https://i.imgur.com/ytj9iGT.png" }
+  ]
+}
