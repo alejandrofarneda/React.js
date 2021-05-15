@@ -57,7 +57,7 @@ function App2() {
                         <br />
                         Edad: {age}
                         <br />
-                        Edad: {email}
+                        Email: {email}
                     </p>
                 </div>
             )}
