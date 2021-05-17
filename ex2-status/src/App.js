@@ -9,11 +9,13 @@ import { useState } from 'react';
 import Signup from './Signup';
 import Radio from './Radio';
 import FindChar from './FindChar';
+import Modal from './Menu';
+import Menu from './Menu';
 
 function App2() {
     const [isLogged, setLogged] = useState();
     const [age, setAge] = useState(false);
-    const [email, setEmail]= useState('');
+    const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [chars, setChars] = useState(null);
 
@@ -45,7 +47,7 @@ function App2() {
             ) : (
                 <div className="bienvenido">
                     <h1 className="h1">Bienvenido!</h1>
-                    <p className="nombre">Usuario: {isLogged.username}</p>                   
+                    <p className="nombre">Usuario: {isLogged.username}</p>
                 </div>
             )}
 
@@ -106,8 +108,10 @@ function App2() {
             <p className="separador">
                 -------------------------------FindChar-------------------------------
             </p>
-            
-
+            <Menu />
+            <p className="separador">
+                -------------------------------Menu-------------------------------
+            </p>
         </div>
     );
 }

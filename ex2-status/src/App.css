@@ -36,11 +36,35 @@
   text-align: center;
   
 }
-.App2 .token{
-  text-overflow: ellipsis;
-}
+
 
 .App2 .examples{
   text-align: start;
   margin-left: -1.4rem;
 } 
+
+.modal-bg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: peachpuff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal-bg{
+  background-color: powderblue;
+  color: black;
+  padding: 10px;
+}
+
+.App2 .Jesse{  
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  background-color: cornflowerblue;
+}
