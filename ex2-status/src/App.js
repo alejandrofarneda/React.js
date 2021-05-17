@@ -45,8 +45,7 @@ function App2() {
             ) : (
                 <div className="bienvenido">
                     <h1 className="h1">Bienvenido!</h1>
-                    <p className="nombre">Usuario: {isLogged.username}</p>
-                    <p className="token">Token: {isLogged.token}</p>
+                    <p className="nombre">Usuario: {isLogged.username}</p>                   
                 </div>
             )}
 
@@ -107,6 +106,8 @@ function App2() {
             <p className="separador">
                 -------------------------------FindChar-------------------------------
             </p>
+            
+
         </div>
     );
 }

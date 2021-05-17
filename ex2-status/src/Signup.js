@@ -16,7 +16,7 @@ function Signup({ onLogin, mail, changeAge, changeEmail }) {
     return (
         <>
             <form className="form" onSubmit={(e) => handleSubmit(e)}>
-                <h3>Login</h3>
+                <h3>Sign Up</h3>
                 <label className="usuario">
                     Username:
                     <input
