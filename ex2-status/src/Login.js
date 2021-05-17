@@ -23,7 +23,7 @@ function Login2({ onLogin }) {
                 return onLogin(data);
             }
         } catch (err) {
-            console.log(err);
+            alert(err);
         }
     }
     return (

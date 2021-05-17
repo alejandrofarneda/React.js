@@ -28,11 +28,19 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: oblique;
   text-transform: uppercase;
+  text-align: center;
+  
 }
 
 .App2 .nombre{
-  text-align: left;
+  text-align: center;
+  
 }
 .App2 .token{
   text-overflow: ellipsis;
 }
+
+.App2 .examples{
+  text-align: start;
+  margin-left: -1.4rem;
+} 

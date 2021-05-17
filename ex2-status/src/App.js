@@ -8,9 +8,10 @@ import Todolist2 from './Todolist';
 import { useState } from 'react';
 import Signup from './Signup';
 import Radio from './Radio';
+import FindChar from './FindChar';
 
 function App2() {
-    const [isLogged, setLogged] = useState(false);
+    const [isLogged, setLogged] = useState();
     const [age, setAge] = useState(false);
     const [email, setEmail]= useState('');
     const [message, setMessage] = useState('');
@@ -80,6 +81,30 @@ function App2() {
             <Radio value={message} setValue={setMessage} />
             <p className="separador">
                 -------------------------------Radio-------------------------------
+            </p>
+            {!isLogged ? (
+                <FindChar onLogin={setLogged} />
+            ) : (
+                <div>
+                    {isLogged.map((e) => (
+                        <form className="bienvenido">
+                            <h1 className="h1">Resultados:</h1>
+                            <p className="nombre">{e.name}</p>
+                            <img
+                                className="nombre"
+                                src={e.image}
+                                alt={e.name}
+                                width="200"
+                                height="100"
+                            />
+                            <p></p>
+                            <button>New Search</button>
+                        </form>
+                    ))}
+                </div>
+            )}
+            <p className="separador">
+                -------------------------------FindChar-------------------------------
             </p>
         </div>
     );
