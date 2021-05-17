@@ -1,19 +1,16 @@
 import { useState } from 'react';
 import Spinner2 from './Spinner';
 
-
-
-function Signup({ onLogin, changeAge, changeEmail }) {
-    let [userN, setUserN] = useState('');
-    let [pass, setPass] = useState('');
-    let[age, setAge] = useState('')
+function Signup({ onLogin, mail, changeAge, changeEmail }) {
+    let [username, setUserN] = useState('');
+    let [password, setPass] = useState('');
     let [type, setType] = useState('password');
-    let[email, setEmail] = useState('');
     function handleSubmit(e) {
-        e.preventDefault();
-        onLogin(userN);
-        changeAge(age)
-        changeEmail(email);
+        e.preventDefault();        
+        
+        const data = {username}
+        onLogin(data);
+        changeEmail(mail);
     }
 
     return (
@@ -25,7 +22,7 @@ function Signup({ onLogin, changeAge, changeEmail }) {
                     <input
                         placeholder="User..."
                         required
-                        value={userN}
+                        value={username}
                         onChange={(e) => setUserN(e.target.value)}
                         className="userInput"
                     />
@@ -33,7 +30,7 @@ function Signup({ onLogin, changeAge, changeEmail }) {
                 <br />
                 <div className="spinner">Edad:</div>{' '}
                 <span>
-                    <Spinner2 age={setAge} />
+                    <Spinner2 setAge={changeAge} />
                 </span>
                 <br />
                 <label className="email">
@@ -41,8 +38,8 @@ function Signup({ onLogin, changeAge, changeEmail }) {
                     <input
                         placeholder="Email..."
                         required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={mail}
+                        onChange={(e) => changeEmail(e.target.value)}
                         className="emailInput"
                     />
                 </label>
@@ -53,7 +50,7 @@ function Signup({ onLogin, changeAge, changeEmail }) {
                         type={type}
                         required
                         placeholder="Password..."
-                        value={pass}
+                        value={password}
                         onChange={(e) => setPass(e.target.value)}
                         className="passInput"
                     />
@@ -78,4 +75,3 @@ function Signup({ onLogin, changeAge, changeEmail }) {
 }
 
 export default Signup;
-

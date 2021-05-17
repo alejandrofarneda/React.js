@@ -1,38 +1,41 @@
 import { useState } from 'react';
-import './Login.css'
+import './Login.css';
 
-function Login2() {
-    let [userN, setUserN] = useState('');
-    let [pass, setPass] = useState('')
+function Login2({ onLogin }) {
+    let [username, setUserN] = useState('');
+    let [password, setPass] = useState('');
     let [type, setType] = useState('password');
-    let [show, setShow] = useState('');
-    function handleSubmit(e){
+    async function handleSubmit(e) {
         e.preventDefault();
-        setShow(show = 'Welcome ' + userN + '!!') 
-               
-    }
-    if(show !== ''){
-        return (
-            <div>
-                <p className="welcome">{show}</p>
-            </div>
-        );
-
+        try {
+            const response = await fetch(
+                'http://chat-api.trek-quest.com/login',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({ username, password }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+            const data = await response.json();
+            if (response.ok) {
+                return onLogin(data);
+            }
+        } catch (err) {
+            console.log(err);
+        }
     }
     return (
         <>
-            <form
-                className="form"
-                onSubmit={(e) =>
-                    handleSubmit(e)}
-            >
+            <form className="form" onSubmit={(e) => handleSubmit(e)}>
                 <p></p>
                 <label className="usuario">
                     Username:
                     <input
                         placeholder="User..."
                         required
-                        value={userN}
+                        value={username}
                         onChange={(e) => setUserN(e.target.value)}
                         className="userInput"
                     />
@@ -44,7 +47,7 @@ function Login2() {
                         type={type}
                         required
                         placeholder="Password..."
-                        value={pass}
+                        value={password}
                         onChange={(e) => setPass(e.target.value)}
                         className="passInput"
                     />
@@ -62,8 +65,6 @@ function Login2() {
                 </label>
                 <br />
                 <button>Log In</button>
-
-                
             </form>
         </>
     );

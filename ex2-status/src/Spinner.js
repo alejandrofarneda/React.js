@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
-function Spinner2({ age }) {
+function Spinner2({ setAge }) {
     const [n, setN] = useState(7);
 
     function handlePlus() {
         setN(n + 1);
-        age(n);
+        setAge(n);
     }
 
     function handleLess() {
         setN(n - 1);
-        age(n);
+        setAge(n);
     }
 
     return (

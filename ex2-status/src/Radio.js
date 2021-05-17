@@ -6,7 +6,7 @@ function Radio({value, setValue}) {
 
     return (
         <div className="hinchada" back>
-            <input className={value} value={value} />
+            <input className={value} value={value} readOnly/>
             <button
                 onClick={() => setValue('River')}
                 className={value !== 'River' ? 'nop' : 'River'}
@@ -19,8 +19,7 @@ function Radio({value, setValue}) {
             >
                 Boca
             </button>
-            <button
-                className={value}
+            <button                
                 onClick={() => setValue('Unión')}
                 className={value !== 'Unión' ? 'nop' : 'Unión'}
             >

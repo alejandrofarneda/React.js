@@ -81,15 +81,21 @@ function Calculator2() {
                 </button>
             </div>
             <div className="numeros">
-                {numeros.map((n, i) => (
-                    <button
-                        type="button"
-                        className="num"
-                        onClick={() => (a === 0 ? handleA(n) : handleB(n))}
-                    >
-                        {n}
-                    </button>
-                ))}{' '}
+                {numeros.map(
+                    (n, i) =>
+                        (
+                            <button
+                                key={i}
+                                type="button"
+                                className="num"
+                                onClick={() =>
+                                    a === 0 ? handleA(n) : handleB(n)
+                                }
+                            >
+                                {n}
+                            </button>
+                        )
+                )}{' '}
             </div>
             <button
                 type="button"

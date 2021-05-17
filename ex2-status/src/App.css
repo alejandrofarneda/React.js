@@ -30,6 +30,9 @@
   text-transform: uppercase;
 }
 
-.App2 .datos{
+.App2 .nombre{
   text-align: left;
+}
+.App2 .token{
+  text-overflow: ellipsis;
 }

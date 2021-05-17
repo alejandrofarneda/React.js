@@ -12,8 +12,9 @@ import Radio from './Radio';
 function App2() {
     const [isLogged, setLogged] = useState(false);
     const [age, setAge] = useState(false);
-    const [email, setEmail]= useState(false);
+    const [email, setEmail]= useState('');
     const [message, setMessage] = useState('');
+
     return (
         <div className="App2">
             <Spinner2 />
@@ -37,7 +38,15 @@ function App2() {
             <p className="separador">
                 -----------------------------Greetings-----------------------------
             </p>
-            <Login2 defaultUser="demo" />
+            {!isLogged ? (
+                <Login2 defaultUser="demo" onLogin={setLogged} />
+            ) : (
+                <div className="bienvenido">
+                    <h1 className="h1">Bienvenido!</h1>
+                    <p className="nombre">Usuario: {isLogged.username}</p>
+                    <p className="token">Token: {isLogged.token}</p>
+                </div>
+            )}
 
             <p className="separador">
                 -------------------------------LogIn-------------------------------
@@ -50,13 +59,14 @@ function App2() {
                 <Signup
                     onLogin={setLogged}
                     changeAge={setAge}
+                    mail={email}
                     changeEmail={setEmail}
                 />
             ) : (
                 <div className="bienvenido">
                     <h1 className="h1">Bienvenido!</h1>
-                    <p className="datos">
-                        Usuario: {isLogged}
+                    <p className="nombre">
+                        Usuario: {isLogged.username}
                         <br />
                         Edad: {age}
                         <br />
@@ -71,7 +81,6 @@ function App2() {
             <p className="separador">
                 -------------------------------Radio-------------------------------
             </p>
-            
         </div>
     );
 }
