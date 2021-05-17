@@ -15,6 +15,7 @@ function App2() {
     const [age, setAge] = useState(false);
     const [email, setEmail]= useState('');
     const [message, setMessage] = useState('');
+    const [chars, setChars] = useState(null);
 
     return (
         <div className="App2">
@@ -82,11 +83,11 @@ function App2() {
             <p className="separador">
                 -------------------------------Radio-------------------------------
             </p>
-            {!isLogged ? (
-                <FindChar onLogin={setLogged} />
+            {!chars ? (
+                <FindChar onChars={setChars} />
             ) : (
                 <div>
-                    {isLogged.map((e) => (
+                    {chars.map((e) => (
                         <form className="bienvenido">
                             <h1 className="h1">Resultados:</h1>
                             <p className="nombre">{e.name}</p>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function FindChar({ onLogin }) {
+function FindChar({ onChars }) {
     const [char, setChar] = useState('');
     async function handleSubmit(e) {
         e.preventDefault();
@@ -16,7 +16,7 @@ function FindChar({ onLogin }) {
             );
             const character = await response.json();
             if (response.ok) {
-                return onLogin(character.results);
+                return onChars(character.results);
             }
         } catch (error) {
             alert(error);
@@ -42,8 +42,7 @@ function FindChar({ onLogin }) {
                 <button>Search</button>
 
                 <ul className="examples">
-                    <u>Ejemplos</u>:
-                    <li>Rick</li>
+                    <u>Ejemplos</u>:<li>Rick</li>
                     <li>Alan</li>
                     <li>Ants</li>
                     <li>Mama</li>
