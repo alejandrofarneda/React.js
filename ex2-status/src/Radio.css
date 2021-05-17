@@ -1,0 +1,32 @@
+.hinchada .Boca {
+    background-color: darkblue;
+    color: gold;
+}
+.hinchada .River {
+    background-color: black;
+    color: red;
+}
+.hinchada .Unión {
+    background-color: red;
+    color: white;
+}
+
+.hinchada > button {
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.hinchada > input {
+    text-align: center;
+    width: 30%;
+}
+.hinchada {
+    padding: 25px;
+    border-style: solid;
+    border-width: 1.5px;
+    display: inline-block;
+    background-image: url('https://cnnespanol.cnn.com/wp-content/uploads/2020/09/200918140226-football-tease-super-169.jpg?quality=100&strip=info');
+    background-repeat: no-repeat;
+    background-size: 380px 100px;
+    background-position: bottom;
+}

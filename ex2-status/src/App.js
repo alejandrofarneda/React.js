@@ -7,11 +7,13 @@ import Greetings2 from './Greetings';
 import Todolist2 from './Todolist';
 import { useState } from 'react';
 import Signup from './Signup';
+import Radio from './Radio';
 
 function App2() {
     const [isLogged, setLogged] = useState(false);
-    const [age, setAge] = useState(false)
-    const [email, setEmail]= useState(false)
+    const [age, setAge] = useState(false);
+    const [email, setEmail]= useState(false);
+    const [message, setMessage] = useState('');
     return (
         <div className="App2">
             <Spinner2 />
@@ -28,7 +30,8 @@ function App2() {
             </p>
             <Toggle2 />
             <p className="separador">
-                ------------------------------Spoiler------------------------------
+                ------------------------------Spoiler +
+                Toggle------------------------------
             </p>
             <Greetings2 />
             <p className="separador">
@@ -61,6 +64,14 @@ function App2() {
                     </p>
                 </div>
             )}
+            <p className="separador">
+                -------------------------------SignUp-------------------------------
+            </p>
+            <Radio value={message} setValue={setMessage} />
+            <p className="separador">
+                -------------------------------Radio-------------------------------
+            </p>
+            
         </div>
     );
 }
