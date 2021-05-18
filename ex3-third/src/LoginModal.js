@@ -109,9 +109,9 @@ function LoginModal({ onLogin, clickOff }) {
                                 onChange={(e) => setPass2(e.target.value)}
                             />
                             <button>Register</button>
-                            <a onClick={(e) => setSignup(false)}>
+                            <p onClick={(e) => setSignup(false)}>
                                 Tienes cuenta? Haz Login
-                            </a>
+                            </p>
                         </form>
                     )}
                 </div>

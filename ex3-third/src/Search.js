@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Cards from './Cards';
 
 function Search({ user }) {
     const [words, setWords] = useState();
@@ -9,7 +10,10 @@ function Search({ user }) {
             'http://poi-api.trek-quest.com/poi?q=' + words
         );
         const results = await response.json();
-        return setSearch(results);
+        console.log(results);
+        return results.length === 0
+            ? setSearch([{ name: 'No se encontraron resultados' }])
+            : setSearch(results);
     }
 
     return (
@@ -27,13 +31,14 @@ function Search({ user }) {
                     <button>Search</button>
                 </label>
             </form>
-            {search && (
+            <p>
+                <br/>
+            </p>
+            {search && 
                 <div>
-                    {search.map((e) => (
-                        <div>{e.name}</div>
-                    ))}
+                    {search.map((e) => <Cards key={e.id} data={e} />)}
                 </div>
-            )}
+            }
         </div>
     );
 }
