@@ -26,7 +26,7 @@
     font-weight: bold;
 }
 
-.todo .navbar .user {
+.todo .navbar .user {    
     font-size: 16pt;
     display: flex;
     justify-content: space-between;

@@ -24,6 +24,8 @@ function LoginModal({ onLogin, clickOff }) {
                 console.log(data);
                 return onLogin(data) + clickOff(false);
             } else {
+                const error = new Error('algo anduvo mal');
+                throw error
             }
         } catch (err) {
             alert(err);
@@ -42,13 +44,14 @@ function LoginModal({ onLogin, clickOff }) {
                         'Content-Type': 'application/json',
                     },
                 }
-            );
-            console.log(response);
+            );            
             if (response.ok) {
                 const data = await response.json();
 
                 return onLogin(data) + setSignup(false);
             } else {
+                const error = new Error('algo anduvo mal');
+                throw error;
             }
         } catch (err) {
             alert(err);
@@ -74,9 +77,9 @@ function LoginModal({ onLogin, clickOff }) {
                                 onChange={(e) => setPass(e.target.value)}
                             />
                             <button>LogIn</button>
-                            <a onClick={(e) => setSignup(true)}>
+                            <p onClick={(e) => setSignup(true)}>
                                 No tienes cuenta? Registrate!
-                            </a>
+                            </p>
                         </form>
                     )}
                     {isSignup && (
