@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Navbar.css';
 
-function LoginModal({ onLogin }) {
+function LoginModal({ onLogin, clickOff }) {
     const [isSignup, setSignup] = useState(false);
     const [username, setUser] = useState();
     const [password, setPass] = useState();
@@ -22,7 +22,7 @@ function LoginModal({ onLogin }) {
             if (response.ok) {
                 const data = await response.json();
                 console.log(data);
-                return onLogin(data);
+                return onLogin(data) + clickOff(false);
             } else {
             }
         } catch (err) {
@@ -47,7 +47,7 @@ function LoginModal({ onLogin }) {
             if (response.ok) {
                 const data = await response.json();
 
-                return onLogin(data);
+                return onLogin(data) + setSignup(false);
             } else {
             }
         } catch (err) {
@@ -57,8 +57,8 @@ function LoginModal({ onLogin }) {
 
     return (
         <div className="modal">
-            <div className="modal-bg">
-                <div className="modal-fg">
+            <div className="modal-bg" onClick={()=>clickOff(false)}>
+                <div className="modal-fg" onClick={e => e.stopPropagation()}>
                     {!isSignup && (
                         <form onSubmit={(e) => handleLogin(e)}>
                             <h3>Haz Login</h3>

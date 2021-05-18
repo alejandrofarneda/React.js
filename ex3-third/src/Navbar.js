@@ -1,11 +1,12 @@
-import './Navbar.css'
+import './Navbar.css';
 
 import { useState } from 'react';
 import LoginModal from './LoginModal';
+import Home from './Home';
 function Navbar() {
     const [showModal, setShowModal] = useState(false);
     const [isLoged, setLoged] = useState(false);
-   
+
     return (
         <div className="todo">
             <div className="navbar">
@@ -22,7 +23,10 @@ function Navbar() {
                     <button onClick={() => setShowModal(true)}>LogIn</button>
                 </div>
             </div>
-            {showModal && <LoginModal onLogin={setLoged} />}
+            {isLoged && <Home data={isLoged} />}
+            {showModal && (
+                <LoginModal onLogin={setLoged} clickOff={setShowModal} />
+            )}
         </div>
     );
 }
