@@ -5,13 +5,13 @@ function WindowSize() {
         `${window.innerHeight} x ${window.innerWidth}`
     );
     useEffect(() => {
-        window.addEventListener('resize', Resize());
+        function Resize() {
+            return (e) => {
+                setSize(`${window.innerHeight} x ${window.innerWidth}`);
+            };
+        }
+        window.addEventListener('resize', Resize());        
     }, []);
-    function Resize() {
-        return (e) => {
-            setSize(`${window.innerHeight} x ${window.innerWidth}`)
-        };
-    }
 
     return (
         <div>

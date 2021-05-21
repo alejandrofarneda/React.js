@@ -1,8 +1,12 @@
 
 import { useState } from 'react';
 import './App.css';
+import Clock from './Clock';
 import Modal from './Modal';
 import Mount from './Mount';
+import NewHook from './NewHook';
+import OnScroll from './onScroll';
+import Search from './Search';
 import Timer from './Timer';
 import WindowSize from './WindowSize';
 
@@ -16,7 +20,13 @@ function App() {
       {power && <Mount className='mount'/>}
       {power && <Modal/>}
       {power && <Timer/>}
-      <WindowSize/>
+      {power && <WindowSize/>}
+      {power && <OnScroll/>}
+      {power && <Search/>}
+      {power && <Clock/>}
+      <NewHook/>
+
+
 
       
     </div>

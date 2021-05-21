@@ -10,6 +10,15 @@ function Modal() {
         }, 2500);
     }, []);
 
+    useEffect(() => {
+        const closeSpam = e => {
+            if (e.code === 'Escape') {
+                setShow(false);
+            }            
+        };
+        window.addEventListener('keydown', closeSpam);
+    }, []);
+
     return (
         <>
             {show && (
@@ -20,7 +29,7 @@ function Modal() {
                             src="https://image.winudf.com/v2/image1/Y29tLmtpYXNvLmdlaWVsX3NjcmVlbl8wXzE1ODg4MjIzNTZfMDc2/screen-0.jpg?fakeurl=1&type=.jpg"
                             height="250px"
                         />
-                        <div onClick={(e) => setShow(false)}>[X]</div>
+                        <div onClick={() => setShow(false)}>[X]</div>
                     </div>
                 </footer>
             )}
