@@ -1,0 +1,75 @@
+.todo {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #555;
+    color: white;
+}
+
+.todo .navbar {
+    height: 40px;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.todo .navbar .avatar {
+    border-radius: 4px;
+    height: 32px;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.todo .navbar .logo {
+    color: rgb(70, 187, 223);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.todo .navbar .user {    
+    font-size: 16pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal .modal-bg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(56, 51, 47);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal .modal-fg{
+  background-color: powderblue;
+  color: black;
+  padding: 10px; 
+
+}
+
+.modal .modal-fg>form{
+    display: grid;
+    grid-template-columns: 250px;
+    text-align: left;
+
+
+}
+.modal .modal-fg>form>h3{
+    text-align: center;
+}
+.modal .modal-fg>form>p{
+    text-align: center;
+}
+.modal .modal-fg>form>button{
+    width: 65px;
+    margin-left: 40%;
+    margin-top: 10px;
+
+}

@@ -1,0 +1,22 @@
+.cards {
+    
+    display: grid;
+    grid-template-columns: 250px 500px;    
+    justify-content: center;
+    gap: 50px;
+}
+
+.cards .photo {
+    
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    margin-left: 100px;
+}
+
+.cards .info {
+    text-align: left;    
+    padding-left: 10px;
+}
