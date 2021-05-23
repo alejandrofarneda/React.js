@@ -7,7 +7,7 @@ function About() {
            
             <div>
                 <h3>About Us</h3>
-                <p>Si te lo digo, entonces deberé matarte...</p>
+                <p>If i tell you, we would have to kill you...</p>
             </div>
         </>
     );

@@ -10,12 +10,13 @@ function Character(){
         async function findTheCharById() {            
             const response = await fetch(url + '/' + id);
             const results = await response.json();
+            console.log(results);
             return results.length === 0
                 ? setSearch([{ name: 'No se encontraron resultados' }])
                 : setSearch(results);
         }
         findTheCharById();
-    })
+    }, [id])
 
     return (
         <>
@@ -29,6 +30,8 @@ function Character(){
                         width="250"
                         height="200"
                     />
+                    <div>{'Especie: '+ search.species}</div>
+                    <div>{'Locación: ' + search.location.name}</div>
                 </div>
             )}
         </>

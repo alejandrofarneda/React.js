@@ -16,13 +16,13 @@ function App() {
                     <Route path="/" exact>
                         <Home />
                     </Route>
-                    <Route path="/search" exact>
+                    <Route path="/search/:name?" exact>
                         <Search />
                     </Route>
-                    <Route path="/search/:name" exact>
+                    {/* <Route path="/search/:name" exact>
                         <SearchParams />
-                    </Route>
-                    <Route path="/search/:id" exact>
+                    </Route> */}
+                    <Route path="/search/byid/:id" exact>
                         <Character />
                     </Route>
                     <Route path="/about" exact>
