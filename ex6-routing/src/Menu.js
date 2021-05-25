@@ -1,16 +1,22 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import './App.css';
+import { useUser } from './UserContext';
+
 
 function Menu() {
+    const user = useUser();
     return (
         <div className="menu">
             <p>Menu</p>
             <br />
             <NavLink to="/" activeClassName="active" exact>
                 Home
-            </NavLink>            
+            </NavLink>
             <NavLink to="/search" activeClassName="active" exact>
                 Search
+            </NavLink>
+            <NavLink to="/character/new" activeClassName="active" exact>
+                New Char
             </NavLink>
             <NavLink to="/about" activeClassName="active" exact>
                 About
@@ -31,6 +37,21 @@ function Menu() {
             </NavLink>
             <NavLink to="/search/byid/5" activeClassName="active" exact>
                 Jerry
+            </NavLink>
+            <NavLink to="/login" className="login" exact>
+                {!user ? (
+                    <p>Log-In</p>
+                ) : (
+                    <div>
+                        <div>{user.username}</div>{' '}
+                        <img
+                            className="img"
+                            width="90rem"
+                            alt={user.username}
+                            src={user.avatar}
+                        />
+                    </div>
+                )}
             </NavLink>
         </div>
     );
