@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { Link, Redirect, useHistory } from 'react-router-dom';
-import { useSetUser, useUser} from './UserContext';
-
+import { Redirect, useHistory } from 'react-router-dom';
+import { useSetUser, useUser } from './UserContext';
 
 export default function Login() {
     const setUser = useSetUser();
     const [username, setUsername] = useState();
     const [password, setPass] = useState();
     const history = useHistory();
-    const user = useUser()
+    const user = useUser();
     async function handleSubmit(e) {
         e.preventDefault();
         try {
@@ -29,7 +28,6 @@ export default function Login() {
                 setUser(data);
 
                 history.push('/');
-                
             } else {
                 const error = new Error('algo anduvo mal');
                 throw error;
@@ -39,10 +37,8 @@ export default function Login() {
         }
     }
 
-    if(user){
-        return (
-            <Redirect to='/profile'/>
-        );        
+    if (user) {
+        return <Redirect to="/profile" />;
     }
 
     return (

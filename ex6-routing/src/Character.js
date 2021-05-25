@@ -10,7 +10,6 @@ function Character(){
         async function findTheCharById() {            
             const response = await fetch(url + '/' + id);
             const results = await response.json();
-            console.log(results);
             return results.length === 0
                 ? setSearch([{ name: 'No se encontraron resultados' }])
                 : setSearch(results);

@@ -4,11 +4,9 @@ import useFetch from './useFetch';
 import queryString from 'query-string'
 
 function SearchParams({ name }) {
-    console.log(name);
     const results = useFetch(
         `https://rickandmortyapi.com/api/character?` + queryString.stringify({name})
     );
-    console.log(results);
 
     return (
         <div>

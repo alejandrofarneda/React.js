@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useUser } from './UserContext';
 function useFetch(url) {
     const [search, setSearch] = useState(null);

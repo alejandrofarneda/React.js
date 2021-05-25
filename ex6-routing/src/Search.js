@@ -12,6 +12,7 @@ function Search() {
     const handleSubmit = (e) => {
         e.preventDefault();
         history.push('/search/' + char);
+        setChar('');
     };
 
     return (

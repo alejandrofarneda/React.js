@@ -7,7 +7,6 @@ function UserContentProvider({ children }) {
 
     useEffect(() => {
         localStorage.setItem('session', JSON.stringify(user));
-        console.log(localStorage.getItem('session'));
     }, [user]);
 
     return (
