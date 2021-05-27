@@ -1,0 +1,38 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+}
+.login {
+    border-style: solid;
+    border-color: blanchedalmond;
+    border-width: 0.1rem;
+    width: 35rem;
+    padding: 0 1rem 2rem 4rem;
+}
+.login h3{
+    color: blanchedalmond;
+    padding-left: 4rem;
+}
+
+.login button {
+    width: 6rem;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: blanchedalmond;
+    border-style: none;
+}
+
+.login .input {
+    display: grid;
+    grid-template-columns: 30rem;
+    grid-template-rows: 2rem 2rem;
+    gap: 1rem;
+    font-size: 1rem;
+}
+.login .input input {
+    font-size: 1rem;
+    background-color: blanchedalmond;
+    border-style: none;
+    color: black;
+}

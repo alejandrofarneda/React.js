@@ -1,0 +1,56 @@
+.mensajeria {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    background-color: blanchedalmond;
+}
+.users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: none;
+    border-width: 0.1rem;
+    background-color: rgb(105, 134, 76);
+}
+.users .avatar {
+    border-radius: 50%;
+}
+.users .username {
+    font-size: 1.2rem;
+}
+
+.mensajeria .chat-window {
+    background-color: blanchedalmond;
+    width: 40rem;
+}
+
+.mensajeria .chat-window .message-out {
+    position: fixed;
+    bottom: 0.1rem;
+    width: 20rem;
+    
+}
+.mensajeria .chat-window .message-out .message-out-form {
+    margin-top: 32rem;
+    display: grid;
+    grid-template-columns: 40rem;
+    grid-template-rows: 14rem 2rem;    
+}
+
+.mensajeria .chat-window .message-out .message-out-form .text-area{
+    font-size: 1.5rem;
+    
+}
+
+.mensajeria .chat-window .message-out .message-out-form button{
+    font-size: 1.5rem;
+    width: 6rem;
+    margin-left: 34rem;
+}

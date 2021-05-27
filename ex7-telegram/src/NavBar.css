@@ -1,0 +1,67 @@
+.App .menu {
+    
+    top: 0;
+    width: 736px;
+    height: 7rem;
+    background-color: rgb(105, 134, 76);
+    border: blanchedalmond;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-bottom: black;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App .menu .menu2 {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.App .menu .menu2 .home{
+    font-size: 3rem;
+    display: inline-block;
+    border-style: solid;
+    border-color: blanchedalmond;
+    padding: 0.5rem;
+    border-width: 0.1rem;
+    box-shadow: 1px 2px 5px rgb(155, 148, 148);
+    border-radius: 5px;
+}
+
+.App .menu .menu2 a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
+.App .menu .menu2 .user-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.App .menu .menu2 .user-nav .active{
+    font-size: 2rem;
+}
+
+.user-nav .user {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-nav .username{
+    font-size: 2rem;
+    text-transform: capitalize;
+
+}
+
+.user-nav .img{
+    border-radius: 50%;
+    
+}
