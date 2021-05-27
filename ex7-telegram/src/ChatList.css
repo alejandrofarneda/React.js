@@ -1,4 +1,5 @@
 .mensajeria {
+
     display: flex;
     gap: 0.1rem;
 }
@@ -17,7 +18,7 @@
     border-style: solid;
     border-color: none;
     border-width: 0.1rem;
-    background-color: rgb(105, 134, 76);
+    background-color: #1BD641;
 }
 .users .avatar {
     border-radius: 50%;
@@ -29,8 +30,23 @@
 .mensajeria .chat-window {
     background-color: blanchedalmond;
     width: 40rem;
+    height: auto;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: white;
 }
-
+.mensajeria .chat-window .message-in-in {
+    position: fixed;
+   background-color: white;
+   border-style: solid;
+   border-width: 0.1rem;
+   border-color: black;
+   width: 37rem;
+   height: 30rem;
+   left: 18.88rem;
+   top: 10rem;
+    
+}
 .mensajeria .chat-window .message-out {
     position: fixed;
     bottom: 0.1rem;

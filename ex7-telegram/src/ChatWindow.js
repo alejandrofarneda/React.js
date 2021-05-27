@@ -21,11 +21,10 @@ export default function ChatWindow({ message }) {
                         },
                     }
                 );
-                if(res.ok){
-                    
-                }else{
-                    console.log(await res.json());
-                }
+                
+                console.log(await res.json());
+                setText('')
+                
                     
                 
             } catch (error) {
@@ -37,14 +36,17 @@ export default function ChatWindow({ message }) {
     return (
         <div>
             <div className="message-in">
-                {message &&
-                    message.messages.map((e, i) => <div key={i}>{e}</div>)}
+                <div className='message-in-in'>
+                    {message &&
+                        message.messages.map((e, i) => <div key={i}>{e}</div>)}
+                </div>
             </div>
             <div className="message-out">
-                <form onSubmit={HandleSubmit} className='message-out-form'>
-                    <textarea 
-                    className='text-area'
+                <form onSubmit={HandleSubmit} className="message-out-form">
+                    <textarea
+                        className="text-area"
                         placeholder="Escribe tu mensaje"
+                        value={text}
                         onChange={(e) => setText(e.target.value)}
                     />
                     <button>Enviar</button>

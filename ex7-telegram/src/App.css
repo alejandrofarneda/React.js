@@ -3,8 +3,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
   display: flex;
+  min-height: auto;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   padding-top: 1rem;
@@ -12,7 +12,11 @@
 }
 .App .main{
   display: inline-block;
+  width: 46rem;
   
 
 
+}
+.App .main .home-login{
+  height: 100vh;
 }

@@ -1,9 +1,10 @@
 .App .menu {
     
     top: 0;
-    width: 736px;
+    width: 45.25rem;
+    margin-right: 0.46rem;
     height: 7rem;
-    background-color: rgb(105, 134, 76);
+    background-color: #1BD641;
     border: blanchedalmond;
     border-style: solid;
     border-width: 0.1rem;
@@ -26,6 +27,7 @@
     display: inline-block;
     border-style: solid;
     border-color: blanchedalmond;
+    background-color: rgba(31, 98, 95, 0.644);
     padding: 0.5rem;
     border-width: 0.1rem;
     box-shadow: 1px 2px 5px rgb(155, 148, 148);
@@ -42,6 +44,9 @@
     justify-content: center;
     gap: 1rem;
     font-size: 1.5rem;
+}
+.App .menu .menu2 .user-nav .user .logout{
+    font-size: 1rem;
 }
 
 .App .menu .menu2 .user-nav .active{

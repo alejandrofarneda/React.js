@@ -32,7 +32,6 @@ export default function ChatList() {
         }
         getChats();
     }, [user]);
-    console.log(msj);
 
     return (
         <div className="mensajeria">
@@ -42,6 +41,7 @@ export default function ChatList() {
                         <ChatUsers key={e.id} data={e} setMessage={setMsj} />
                     ))}
             </div>
+            
             <div className='chat-window'>
                 <ChatWindow message={msj}/>
             </div>

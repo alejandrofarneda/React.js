@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-import { useUser } from './UserContext';
+import { useSetUser, useUser } from './UserContext';
 
 function NavBar() {
     const user = useUser();
+    const setUser = useSetUser()
     return (
         <div className="menu">
             <div className="menu2">
@@ -23,6 +24,7 @@ function NavBar() {
                                     alt={user.username}
                                     src={user.avatar}
                                 />
+                                <span className='logout' onClick={()=>setUser(null)}>Logout</span>
                             </div>
                         )}
                     </NavLink>

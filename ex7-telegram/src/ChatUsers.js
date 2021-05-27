@@ -5,7 +5,6 @@ import { useUser } from './UserContext';
 export default function ChatUsers({ data, setMessage }) {
     const user = useUser()
     async function HandleClick(e) {
-        console.log(user.token);
        try {
            const res = await fetch(
                'http://telegram-api.trek-quest.com/chats/' + data.id ,{

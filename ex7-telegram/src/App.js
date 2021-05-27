@@ -14,13 +14,15 @@ function App() {
                 <Switch>
                     <Route path="/" exact>
                         <Home />
-                    </Route>                    
-                    <Route path="/login" exact>
-                        <Login />
                     </Route>
-                    <Route path="/register" exact>
-                        <Register />
-                    </Route>
+                    <div className='home-login'>
+                        <Route path="/login" exact>
+                            <Login />
+                        </Route>
+                        <Route path="/register" exact>
+                            <Register />
+                        </Route>
+                    </div>
 
                     <Route path="/">
                         <h1>Not Found</h1>

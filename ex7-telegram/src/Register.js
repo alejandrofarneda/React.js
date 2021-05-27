@@ -44,6 +44,7 @@ export default function Register() {
                     />
                     <input
                         placeholder="Password"
+                        type='password'
                         onChange={(e) => setPass(e.target.value)}
                     />
                 </div>
