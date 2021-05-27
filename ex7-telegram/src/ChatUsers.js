@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './ChatList.css';
 import { useUser } from './UserContext';
 
