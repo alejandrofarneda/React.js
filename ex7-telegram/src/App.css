@@ -1,12 +1,13 @@
 .App {
-  background-color: #282c34;
+  background-color: #3a4d74;
   color: white;
   display: flex;
-  min-height: auto;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding-top: 1rem;
+  height: auto;
 
 }
 .App .main{
@@ -23,6 +24,12 @@
   color: black;
   margin-left: 11rem;
   font-size: 3rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   text-transform: capitalize;
+}
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    background-color: blanchedalmond;
 }

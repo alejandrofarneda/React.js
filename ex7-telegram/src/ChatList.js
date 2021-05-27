@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useUser } from './UserContext';
 import './ChatList.css';
-import ChatWindow from './ChatWindow';
 import ChatUsers from './ChatUsers';
 
 export default function ChatList() {
     const user = useUser();
     const [contacts, setContacts] = useState();
-    const [msj, setMsj] = useState();
+    const [,setMsj] = useState();
 
     useEffect(() => {
         async function getContacts() {
@@ -33,22 +32,17 @@ export default function ChatList() {
         getContacts();
         
     }, [user]);
-    useEffect(()=>{
-        console.log(msj);
-    }, [msj])
+    
 
     return (
-        <div className="mensajeria">
+       
             <div className="chat-list">
                 {contacts &&
                     contacts.map((e) => (
                         <ChatUsers key={e.id} data={e} setMessage={setMsj} />
                     ))}
-            </div>
+            </div>           
             
-            <div className='chat-window'>
-                <ChatWindow mesage={msj} setMessage={setMsj}/>
-            </div>
-        </div>
+       
     );
 }

@@ -1,18 +1,27 @@
 .login-container {
     display: flex;
+    background-color: black;
+    min-width: 100rem;
+    min-height: 100vh;
     justify-content: center;
     padding-top: 7rem;
 }
 .login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
     border-style: solid;
     border-color: blanchedalmond;
     border-width: 0.1rem;
     width: 35rem;
-    padding: 0 1rem 2rem 4rem;
+    height: 20rem;
+    padding-bottom: 1.5rem;
 }
-.login h3{
+.login h3 {
     color: blanchedalmond;
-    padding-left: 4rem;
+    font-size: 2rem;
 }
 
 .login button {

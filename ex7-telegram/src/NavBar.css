@@ -1,9 +1,8 @@
 .App .menu {
     
     top: 0;    
-    width: 100rem;
+    width: 99.8rem;
     height: 7rem;
-    background-color: #1BD641;
     border: blanchedalmond;
     border-style: solid;
     border-width: 0.1rem;
@@ -13,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #282c34;
 }
 
 .App .menu .menu2 {

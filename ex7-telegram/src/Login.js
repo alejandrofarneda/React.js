@@ -26,7 +26,7 @@ export default function Login() {
             if (res.ok) {
                 const results = await res.json();
                 setUser(results)
-               history.push('/')
+               history.push('/home')
             }else{
                  const error = new Error(res.statusText);
                  throw error;
@@ -36,7 +36,7 @@ export default function Login() {
         }
     };
      if (user) {
-         return <Redirect to="/chat" />;
+         return <Redirect to="/home" />;
      }
     return (
         <div className="login-container">
