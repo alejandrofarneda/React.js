@@ -1,5 +1,4 @@
 .mensajeria {
-
     display: flex;
     gap: 0.1rem;
 }
@@ -18,7 +17,7 @@
     border-style: solid;
     border-color: none;
     border-width: 0.1rem;
-    background-color: #1BD641;
+    background-color: #1bd641;
 }
 .users .avatar {
     border-radius: 50%;
@@ -28,6 +27,7 @@
 }
 
 .mensajeria .chat-window {
+    
     background-color: blanchedalmond;
     width: 40rem;
     height: auto;
@@ -35,37 +35,42 @@
     border-width: 0.1rem;
     border-color: white;
 }
+.mensajeria .chat-window .message-in {
+    display: grid;
+    grid-template-columns: 40rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 .mensajeria .chat-window .message-in-in {
     position: fixed;
-   background-color: white;
-   border-style: solid;
-   border-width: 0.1rem;
-   border-color: black;
-   width: 37rem;
-   height: 30rem;
-   left: 18.88rem;
-   top: 10rem;
+    background-color: white;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+    width: 37rem;
+    height: 30rem;
+    margin-left: 1.3rem;
     
+    top: 10rem;
 }
 .mensajeria .chat-window .message-out {
     position: fixed;
     bottom: 0.1rem;
     width: 20rem;
-    
 }
 .mensajeria .chat-window .message-out .message-out-form {
     margin-top: 32rem;
     display: grid;
     grid-template-columns: 40rem;
-    grid-template-rows: 14rem 2rem;    
+    grid-template-rows: 14rem 2rem;
 }
 
-.mensajeria .chat-window .message-out .message-out-form .text-area{
+.mensajeria .chat-window .message-out .message-out-form .text-area {
     font-size: 1.5rem;
-    
 }
 
-.mensajeria .chat-window .message-out .message-out-form button{
+.mensajeria .chat-window .message-out .message-out-form button {
     font-size: 1.5rem;
     width: 6rem;
     margin-left: 34rem;
