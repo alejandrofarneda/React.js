@@ -1,3 +1,5 @@
+// import { Redirect } from 'react-router';
+// import { Link } from 'react-router-dom';
 import './ChatList.css';
 import { useUser } from './UserContext';
 
@@ -15,16 +17,24 @@ export default function ChatUsers({ data, setMessage }) {
            );
            const mensajes = await res.json();
            setMessage(mensajes);
+        //    <Redirect to={'/chat/' + data.id}/>
+           
+           
            
        } catch (error) {
            alert(error)
        }    
+       
     }
 
     
 
     return (
-        <div onClick={(e) => HandleClick(e)}>
+        <div
+            onClick={(e) =>
+                HandleClick(e)
+            }
+        >
             <div>
                 <div key={data.id} className="users">
                     <img

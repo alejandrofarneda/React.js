@@ -51,11 +51,29 @@ export default function ChatWindow({ mesage, setMessage }) {
     return (
         <div>
             <div className="message-in">
-                <div className="message-in-in">                    
-                    {incoming &&
-                        incoming.messages.map((e, i) => (
-                            <div className='individual'><div className={e.src === user.id ? 'individual-out' : 'individual-in'} key={i}>{e.message}</div><span className='date'>🕛 {e.date.slice(11, 16)}</span></div>
-                        ))}
+                <div className="message-in-in">
+                    {incoming && (
+                        <>
+                            <div>To: {incoming.user.username}</div>
+                            {incoming.messages.map((e, i) => (
+                            <div className="individual">
+                                <div
+                                    className={
+                                        e.src === user.id
+                                            ? 'individual-out'
+                                            : 'individual-in'
+                                    }
+                                    key={i}
+                                >
+                                    {e.message}
+                                </div>
+                                <div className="date">
+                                    🕛 {e.date.slice(11, 16)}
+                                </div>
+                            </div>
+                            ))}
+                        </>
+                    )}
                 </div>
             </div>
             <div className="message-out">

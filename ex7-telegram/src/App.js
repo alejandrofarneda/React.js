@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router';
 
 import './App.css';
+// import ChatUsers from './ChatUsers';
 import Home from './Home';
 import Login from './Login';
 import NavBar from './NavBar';
@@ -15,6 +16,9 @@ function App() {
                     <Route path="/" exact>
                         <Home />
                     </Route>
+                    {/* <Route path="/chat/?" >
+                        <ChatUsers />
+                    </Route> */}
                     <div className="home-login">
                         <Route path="/login" exact>
                             <Login />

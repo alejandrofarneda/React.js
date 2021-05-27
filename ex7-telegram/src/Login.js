@@ -36,7 +36,7 @@ export default function Login() {
         }
     };
      if (user) {
-         return <Redirect to="/" />;
+         return <Redirect to="/chat" />;
      }
     return (
         <div className="login-container">
