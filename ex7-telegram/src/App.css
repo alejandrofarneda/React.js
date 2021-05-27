@@ -10,12 +10,19 @@
 
 }
 .App .main{
-  display: inline-block;
-  width: 46rem;
-  
+  display: flex;
+  width: 100rem;
+  background-color: blanchedalmond;
 
 
 }
 .App .main .home-login{
   height: 100vh;
+}
+.App .main .h1{
+  color: black;
+  margin-left: 11rem;
+  font-size: 3rem;
+  margin-top: 7rem;
+  text-transform: capitalize;
 }
