@@ -1,44 +1,61 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useUser } from './UserContext';
 
-export default function ChatWindow({ message }) {
+export default function ChatWindow({ mesage, setMessage }) {
     const [text, setText] = useState();
     const user = useUser();
-    
-        async function HandleSubmit(e) {
-            e.preventDefault();
+    const [incoming, setIncoming] = useState()
 
-            try {
-                const res = await fetch(
-                    'http://telegram-api.trek-quest.com/chats/' +
-                        message.user.id,
-                    {
-                        method: 'POST',
-                        body: JSON.stringify( text ),
-                        headers: {
-                            'Content-Type': 'application/json',
-                            Authorization: 'Bearer ' + user.token,
-                        },
-                    }
-                );
-                
-                console.log(await res.json());
-                setText('')
-                
-                    
-                
-            } catch (error) {
-                alert(error);
-            }
+    async function HandleSubmit(e) {
+        e.preventDefault();
+        try {
+            const res = await fetch(
+                'http://telegram-api.trek-quest.com/chats/' + mesage.user.id,
+                {
+                    method: 'POST',
+                    body: JSON.stringify({ message: text }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: 'Bearer ' + user.token,
+                    },
+                }
+            );
+            const mensaje = await res.json();
+            console.log(mensaje);
+            setText('');
+        } catch (error) {
+            alert(error);
         }
-   
+        try {
+            const res = await fetch(
+                'http://telegram-api.trek-quest.com/chats/' + mesage.user.id,
+                {
+                    headers: {
+                        Authorization: 'Bearer ' + user.token,
+                    },
+                }
+            );
+           const mensajes = await res.json();
+           setMessage(mensajes);
+           
+            
+        } catch (error) {
+            
+        }
+    }    
+
+    useEffect(()=>{
+        setIncoming(mesage);
+    }, [mesage])
 
     return (
         <div>
             <div className="message-in">
-                <div className='message-in-in'>
-                    {message &&
-                        message.messages.map((e, i) => <div key={i}>{e}</div>)}
+                <div className="message-in-in">                    
+                    {incoming &&
+                        incoming.messages.map((e, i) => (
+                            <div className='individual'><div className={e.src === user.id ? 'individual-out' : 'individual-in'} key={i}>{e.message}</div><span className='date'>🕛 {e.date.slice(11, 16)}</span></div>
+                        ))}
                 </div>
             </div>
             <div className="message-out">

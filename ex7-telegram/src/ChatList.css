@@ -26,38 +26,61 @@
     font-size: 1.2rem;
 }
 
-.mensajeria .chat-window {
-    
+.mensajeria .chat-window {    
     background-color: blanchedalmond;
     width: 40rem;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
     border-style: solid;
     border-width: 0.1rem;
     border-color: white;
 }
-.mensajeria .chat-window .message-in {
-    display: grid;
-    grid-template-columns: 40rem;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-.mensajeria .chat-window .message-in-in {
-    position: fixed;
+
+.message-in-in {
+   
     background-color: white;
     border-style: solid;
     border-width: 0.1rem;
     border-color: black;
-    width: 37rem;
-    height: 30rem;
-    margin-left: 1.3rem;
+    min-height: 30rem;
+    height: auto;
+    height: auto;
+    color: black;
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.2rem;
+    padding: 1rem;
     
-    top: 10rem;
+    
+}
+.mensajeria .chat-window .message-in-in .individual{
+    display: flex;    
+    justify-content: space-between;
+    gap: 17rem;
+    align-items: baseline;
+
+}
+.individual-in{
+    color: #1bd641;
+}
+.individual-out{
+    color: red;
+}
+
+
+.mensajeria .chat-window .message-in-in .individual .date{
+    color: #1bd641;
+    font-size: 1rem;
+    margin-right: 0.6rem;
 }
 .mensajeria .chat-window .message-out {
     position: fixed;
     bottom: 0.1rem;
     width: 20rem;
+    
 }
 .mensajeria .chat-window .message-out .message-out-form {
     margin-top: 32rem;

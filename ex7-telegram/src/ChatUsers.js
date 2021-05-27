@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './ChatList.css';
 import { useUser } from './UserContext';
 
@@ -13,12 +14,15 @@ export default function ChatUsers({ data, setMessage }) {
                    }
                }
            );
-           setMessage(await res.json());
+           const mensajes = await res.json();
+           setMessage(mensajes);
            
        } catch (error) {
            alert(error)
        }    
     }
+
+    
 
     return (
         <div onClick={(e) => HandleClick(e)}>

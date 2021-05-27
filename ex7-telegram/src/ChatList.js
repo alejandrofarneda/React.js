@@ -6,11 +6,11 @@ import ChatUsers from './ChatUsers';
 
 export default function ChatList() {
     const user = useUser();
-    const [chats, setChat] = useState();
+    const [contacts, setContacts] = useState();
     const [msj, setMsj] = useState();
 
     useEffect(() => {
-        async function getChats() {
+        async function getContacts() {
             try {
                 const res = await fetch(
                     'http://telegram-api.trek-quest.com/chats',
@@ -21,7 +21,7 @@ export default function ChatList() {
                     }
                 );
                 if (res.ok) {
-                    setChat(await res.json());
+                    setContacts(await res.json());
                 } else {
                     const error = new Error('Algo anduvo Mal!');
                     throw error;
@@ -30,20 +30,24 @@ export default function ChatList() {
                 alert(error);
             }
         }
-        getChats();
+        getContacts();
+        
     }, [user]);
+    useEffect(()=>{
+        console.log(msj);
+    }, [msj])
 
     return (
         <div className="mensajeria">
             <div className="chat-list">
-                {chats &&
-                    chats.map((e) => (
+                {contacts &&
+                    contacts.map((e) => (
                         <ChatUsers key={e.id} data={e} setMessage={setMsj} />
                     ))}
             </div>
             
             <div className='chat-window'>
-                <ChatWindow message={msj}/>
+                <ChatWindow mesage={msj} setMessage={setMsj}/>
             </div>
         </div>
     );
