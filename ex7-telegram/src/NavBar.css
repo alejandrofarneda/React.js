@@ -1,7 +1,7 @@
 .App .menu {
     
     top: 0;    
-    width: 99.8rem;
+    width: 100rem;
     height: 7rem;
     border: blanchedalmond;
     border-style: solid;
@@ -16,7 +16,7 @@
 }
 
 .App .menu .menu2 {
-    width: 85%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -3,19 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
-import UserContentProvider from './UserContext';
-import ErrorBoundary from './ErrorBoundary';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
-            <UserContentProvider>
-                <ErrorBoundary>
-                    <App />
-                </ErrorBoundary>
-            </UserContentProvider>
-        </Router>
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 );

@@ -6,7 +6,6 @@ import ChatUsers from './ChatUsers';
 export default function ChatList() {
     const user = useUser();
     const [contacts, setContacts] = useState();
-    const [,setMsj] = useState();
 
     useEffect(() => {
         async function getContacts() {
@@ -26,7 +25,7 @@ export default function ChatList() {
                     throw error;
                 }
             } catch (error) {
-                alert(error);
+                throw error;
             }
         }
         getContacts();
@@ -39,7 +38,7 @@ export default function ChatList() {
             <div className="chat-list">
                 {contacts &&
                     contacts.map((e) => (
-                        <ChatUsers key={e.id} data={e} setMessage={setMsj} />
+                        <ChatUsers key={e.id} data={e} />
                     ))}
             </div>           
             

@@ -1,10 +1,10 @@
 import useFetch from './useFetch';
 import Product from './Product';
+import ErrorBoundary from './ErrorBoundary';
 
 function Products() {
     const url = 'https://run.mocky.io/v3/09257dec-566c-4cbe-a81b-54c864a6b9dc';
     const [products] = useFetch(url);
-    
 
     return (
         <div>

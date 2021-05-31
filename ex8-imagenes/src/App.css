@@ -1,0 +1,30 @@
+:root {
+    background-color: #282c34;
+}
+.App {
+    text-align: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.App .preview {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+    border-radius: 50%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+input[type='file'] {
+    display: none;
+}

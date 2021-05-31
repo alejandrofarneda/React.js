@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import UserContentProvider from './UserContext';
+import ErrorBoundary from './ErrorBoundary';
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
             <UserContentProvider>
-                <App />
+                <ErrorBoundary>
+                    <App />
+                </ErrorBoundary>
             </UserContentProvider>
         </Router>
     </React.StrictMode>,

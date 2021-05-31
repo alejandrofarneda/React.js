@@ -1,10 +1,18 @@
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import { useSetUser, useUser } from './UserContext';
+import { useHistory } from 'react-router';
 
 function NavBar() {
     const user = useUser();
     const setUser = useSetUser();
+    const history = useHistory();
+
+    function handleLogout(e) {
+        e.preventDefault();
+        setUser(null);
+        history.push('/login');
+    }
     return (
         <div className="menu">
             <div className="menu2">
@@ -17,7 +25,7 @@ function NavBar() {
                             <p>Log-In</p>
                         </NavLink>
                     ) : (
-                        <NavLink to="/login" activeClassName="active" exact>
+                        <NavLink to="/profile" activeClassName="active" exact>
                             <div className="user">
                                 <img
                                     className="img"
@@ -28,7 +36,7 @@ function NavBar() {
                                 <div className="username">{user.username}</div>{' '}
                                 <span
                                     className="logout"
-                                    onClick={() => setUser(null)}
+                                    onClick={(e) => handleLogout(e)}
                                 >
                                     Logout
                                 </span>

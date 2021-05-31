@@ -1,35 +1,71 @@
 .App {
-  background-color: #3a4d74;
-  color: white;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 1rem;
-  height: auto;
+    background-color: #3a4d74;
+    color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    height: auto;
+}
+.App .main {
+    display: flex;
+    min-width: 100.3rem;
+    background-color: blanchedalmond;
+}
+.App .main .home-login {
+    height: 100vh;
+}
+.App .main .h1 {
+    color: black;
+    margin-left: 30rem;
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-transform: capitalize;
+}
 
+.App .main .change-avatar {
+    min-width: 100.3rem;
+    min-height: 100rem;
+    display: flex;
+    justify-content: center;
+    background-color: #282c34;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: white;
+    align-self: center;
 }
-.App .main{
-  display: flex;
-  width: 100rem;
-  background-color: blanchedalmond;
 
+.change-avatar .form {
+    margin-top: 5rem;
+    padding: 1rem;
 
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    border-style: solid;
+    min-width: 40rem;
+    height: 25rem;
+    border-width: 0.1rem;
+    border-color: white;
+    align-items: center;
 }
-.App .main .home-login{
-  height: 100vh;
-}
-.App .main .h1{
-  color: black;
-  margin-left: 11rem;
-  font-size: 3rem;
-  margin-top: 3rem;
-  text-transform: capitalize;
-}
-.chat-list {
+.change-avatar .form form {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
-    background-color: blanchedalmond;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.change-avatar .form .preview {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.change-avatar .form form button {
+    align-self: center;
+    width: 5rem;
 }

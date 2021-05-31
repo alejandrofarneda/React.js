@@ -4,7 +4,6 @@ function Cart() {
 
     const contents = useCart()
     let total = 0
-    
     contents.forEach(e => {
         total += e.cantidad * e.precio;
     });

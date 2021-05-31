@@ -1,9 +1,9 @@
 import { Route, Switch } from 'react-router';
 
 import './App.css';
-import ChatList from './ChatList';
+import ChangeAvatar from './ChangeAvatar';
 import ChatWindow from './ChatWindow';
-// import ChatUsers from './ChatUsers';
+import ErrorBoundary from './ErrorBoundary';
 import Home from './Home';
 import Login from './Login';
 import NavBar from './NavBar';
@@ -24,83 +24,27 @@ function App() {
                 </Route>
             </div>
             {user && (
-                <main className="main">
-                    <Switch>
-                        <Route path="/home" exact>
-                            <Home />
-                        </Route>
-                        
-                        <Route path="/chats/:id" exact>
-                            <ChatList />
-                            <ChatWindow />
-                            <div>
-                                <h1 className="h1">
-                                    Bienvenido {user.username}!
-                                    <br />
-                                    |HA|
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br /> |CK|
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br /> |A|
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br /> |BO|
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br /> |SS|
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    \ . /
-                                    <br />
-                                    / . \
-                                    <br />
-                                    |BITCH|
-                                </h1>
-                            </div>
-                        </Route>
+                <>
+                    <main className="main">
+                        <Switch>
+                            <Route path="/home/chats/:id" exact>
+                                <ErrorBoundary
+                                    fallback={<h1>Error en Chat-Window</h1>}
+                                >
+                                    <ChatWindow />
+                                </ErrorBoundary>
+                            </Route>
+                            <Route path="/profile">
+                                <ChangeAvatar />
+                            </Route>
+                            
 
-                        <Route path="/">
-                            <h1>Not Found</h1>
-                        </Route>
-                    </Switch>
-                </main>
+                            <Route path="/">
+                                <Home />
+                            </Route>
+                        </Switch>
+                    </main>
+                </>
             )}
         </div>
     );

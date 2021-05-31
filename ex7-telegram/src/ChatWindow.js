@@ -6,9 +6,9 @@ import './ChatList.css';
 export default function ChatWindow() {
     const [text, setText] = useState();
     const user = useUser();
-    const [incoming, setIncoming] = useState();
     const { id } = useParams();
-    const [message, setMessage] = useState()
+    const [message, setMessage] = useState();
+    const [onOff, setOnOff] = useState();
 
     async function HandleSubmit(e) {
         e.preventDefault();
@@ -24,24 +24,12 @@ export default function ChatWindow() {
                     },
                 }
             );
-            const mensaje = await res.json();
-            console.log(mensaje);
+            const msje = await res.json();
             setText('');
+            setOnOff(msje);
         } catch (error) {
-            alert(error);
+            throw error;
         }
-        try {
-            const res = await fetch(
-                'http://telegram-api.trek-quest.com/chats/' + id,
-                {
-                    headers: {
-                        Authorization: 'Bearer ' + user.token,
-                    },
-                }
-            );
-            const mensajes = await res.json();
-            setMessage(mensajes);
-        } catch (error) {}
     }
 
     useEffect(() => {
@@ -56,32 +44,34 @@ export default function ChatWindow() {
             );
             const mensajes = await res.json();
             setMessage(mensajes);
-        };  
-        getChat()
+        };
+        getChat();
+    }, [id, onOff, user]);
 
-        setIncoming(message);
-    }, [id]);
     return (
         <div className="chat-window">
-            <div className="message-in">
-                <div className="message-in-in">
-                    {incoming && (
+            <div>
+                <div className="message-in">
+                    {message && (
                         <>
-                            <div>To: {incoming.user.username}</div>
-                            {incoming.messages.map((e, i) => (
-                                <div className="individual">
+                            <div className="to">
+                                To: {message.user.username}
+                            </div>
+                            {message.messages.map((e, i) => (
+                                <div key={i} className="individual">
                                     <div
+                                        key={e.src}
                                         className={
                                             e.src === user.id
                                                 ? 'individual-out'
                                                 : 'individual-in'
                                         }
-                                        key={i}
                                     >
-                                        {e.message}
-                                    </div>
-                                    <div className="date">
-                                        🕛 {e.date.slice(11, 16)}
+                                        <div> {e.message}</div>
+
+                                        <span className="date">
+                                            🕛{e.date.slice(11, 16)}
+                                        </span>
                                     </div>
                                 </div>
                             ))}
@@ -93,9 +83,10 @@ export default function ChatWindow() {
                 <form onSubmit={HandleSubmit} className="message-out-form">
                     <textarea
                         className="text-area"
-                        placeholder="Escribe tu mensaje"
+                        placeholder="Write..."
                         value={text}
                         onChange={(e) => setText(e.target.value)}
+                        autoFocus
                     />
                     <button>Enviar</button>
                 </form>

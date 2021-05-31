@@ -4,11 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CartContentProvider from './CartContent';
+import ErrorBoundary from './ErrorBoundary';
+
+const Error = () => {
+    return (
+        <div>
+            se ha producido un error.
+            <button onClick={()=> window.location.reload() }>Reload</button>
+
+         
+        </div>
+    )
+}
 
 ReactDOM.render(
     <React.StrictMode>
         <CartContentProvider>
-            <App />
+            <ErrorBoundary fallback={<Error/>}>
+                <App />
+            </ErrorBoundary>
         </CartContentProvider>
     </React.StrictMode>,
     document.getElementById('root')

@@ -1,29 +1,11 @@
 import { useHistory } from 'react-router';
 import './ChatList.css';
-import { useUser } from './UserContext';
-import { useParams } from 'react-router-dom';
 
-export default function ChatUsers({ data, setMessage }) {
+export default function ChatUsers({ data }) {
     const history = useHistory();
-    const user = useUser();
-    const { id } = useParams();
 
     async function HandleClick(e) {
-        try {
-            const res = await fetch(
-                'http://telegram-api.trek-quest.com/chats/' + data.id,
-                {
-                    headers: {
-                        Authorization: 'Bearer ' + user.token,
-                    },
-                }
-            );
-            const mensajes = await res.json();
-            setMessage(mensajes);
-            history.push('/chats/' + data.id);
-        } catch (error) {
-            alert(error);
-        }
+        history.push('/home/chats/' + data.id);
     }
 
     return (
@@ -34,7 +16,7 @@ export default function ChatUsers({ data, setMessage }) {
                         className="avatar"
                         src={data.avatar}
                         alt={data.username}
-                        width="80rem"
+                        width="100rem"
                     />
                     <div className="username">{data.username}</div>
                 </div>

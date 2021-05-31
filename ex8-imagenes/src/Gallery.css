@@ -1,0 +1,35 @@
+.gallery {
+    width: 30rem;
+    min-height: 30rem;
+
+    align-items: center;
+    align-self: center;
+    gap: 1rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.1rem;
+}
+
+.gallery .gallery-list input[type='file'] {
+    display: none;
+}
+
+.gallery .gallery-list {
+    display: inline-block;
+}
+.gallery .gallery-list .image {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+    border-radius: 10%;
+}
+.gallery .gallery-list .image-add {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+    border-radius: 10%;
+}

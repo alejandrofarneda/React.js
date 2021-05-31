@@ -1,6 +1,10 @@
+import { Route, Switch } from 'react-router';
 import ChatList from './ChatList';
+// import ChatWindow from './ChatWindow';
 import Login from './Login';
 import { useUser } from './UserContext';
+import './App.css';
+
 
 function Home() {
     const user = useUser();
@@ -12,73 +16,26 @@ function Home() {
                 </div>
             )}
             {user && (
-                <>
-                    <div className="chat-window">
+                <main className="main">
+                    <div className="chat-list">
                         <ChatList />
                     </div>
-                    <div>
-                        
-                        <h1 className="h1">
-                            Bienvenido {user.username}!
-                            <br />
-                            |HA|
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br /> |CK|
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br /> |A|
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br /> |BO|
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br /> |SS|
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            \ . /
-                            <br />
-                            / . \
-                            <br />
-                            |BITCH|
-                        </h1>
-                    </div>
-                </>
+                    <Switch>
+                        {/* <Route path="home/chats/:id" >
+                            <div>
+                                <ChatWindow />
+                            </div>
+                        </Route> */}
+                        <Route path="/home">
+                            <div>
+                                <h1 className="h1">
+                                 Bienvenido {user.username}!!<br/>
+                                 Escoge una sala para hablar
+                                </h1>
+                            </div>
+                        </Route>
+                    </Switch>
+                </main>
             )}
         </>
     );
