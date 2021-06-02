@@ -8,7 +8,6 @@ function useMyHook(number) {
 
 function NewHook() {
     const [count, setCount] = useMyHook(10);
-    
 
     useEffect(() => {
         const time = setInterval(() => {

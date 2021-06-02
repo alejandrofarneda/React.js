@@ -1,0 +1,11 @@
+{
+    "cart.title": "Cesta de la compra",
+    "cart.total": "Total: {total}",
+    "cart.quantity": "{n} {n, plural, =1 {ud} other {uds}}",
+    "cart.price": "Precio: ",
+    "cart.product": "Producto: ",
+    "cart.mainTitle": "Productos: ",
+    "cart.name": "Nombre: "
+    
+
+}

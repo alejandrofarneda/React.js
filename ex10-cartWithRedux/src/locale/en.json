@@ -1,0 +1,13 @@
+{
+   
+    "cart.title": "Shoping chest",
+    "cart.total": "Total: {total}",
+    "cart.quantity": "{n} {n, plural, =1 {ud} other {uds}}",
+    "cart.price": "Price: ",
+    "cart.product": "Product: ",
+    "cart.mainTitle": "Products: ",
+    "cart.name": "Name: "
+
+
+
+}

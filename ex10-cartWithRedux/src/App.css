@@ -1,0 +1,59 @@
+.App {
+    background-color: #282c34;
+    min-height: 100vh;
+
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App .main {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App .header {
+    height: 5rem;
+    text-align: left;
+    width: 100%;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0);
+}
+.App .header p {
+    display: inline-block;
+
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+.App .aside {
+    position: fixed;
+    top: 5rem;
+    right: 0px;
+    width: 20rem;
+    min-height: 100vw;
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    background-color: rgb(61, 61, 61);
+    box-shadow: 3px 3px 10px black;
+}
+.App .aside .chart h1 {
+    font-size: 2rem;
+}
+
+.App .photo {
+    align-self: center;
+    height: 70px;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20%;
+}
+.App .tobuy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

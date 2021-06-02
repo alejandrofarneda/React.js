@@ -1,0 +1,32 @@
+.products {
+    display: grid;
+    grid-template-columns: 180px 180px 180px;
+    gap: 3rem;
+}
+
+.cards {
+    border-style: solid;
+    border-color: blanchedalmond;
+    border-width: 0.1rem;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: black;
+    box-shadow: 3px 3px 10px black;
+}
+.cards .photo {
+    height: 120px;
+    width: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20%;
+}
+
+.cards .info {
+    text-align: left;
+    font-size: 13px;
+    text-align: start;
+}

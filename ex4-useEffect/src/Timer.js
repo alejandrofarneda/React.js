@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 
 function Timer() {
-    const [count, setCount] = useState(10);
-
+    const [count, dispatch] = useReducer((s) => s < 10 && s + 1, 0);
+    //funcionamiento de useReducer sin declarar un store...
+    //simple como lo son estas líneas. en la misma 4 declaramos lo que será dispatch
     useEffect(() => {
         const time = setInterval(() => {
-            setCount((n) => (n > 1 ? n - 1 : 0));
+            dispatch(); //aqui podriamos llamar un dispatch vacío ya que no existen cases
         }, 1000);
 
         return () => {
-            console.log('unmount');
             clearInterval(time);
         };
     }, []);
