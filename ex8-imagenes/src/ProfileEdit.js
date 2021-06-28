@@ -9,7 +9,6 @@ function ProfileEdit() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const fd = new FormData();
-        fd.append('title', title);
         fd.append('avatar', file);
         const ret = await fetch('http://telegram-api.trek-quest.com/avatar', {
             method: 'POST',
